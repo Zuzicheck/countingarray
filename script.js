@@ -2,23 +2,24 @@
 
 window.addEventListener("DOMContentLoaded", timer);
 
-const myArray = [];
-let myCounter = 0;
+const exeArray = [];
+let exeCounter = 0;
 
+//console.log exeArray value every second in a new line
 function timer() {
     setTimeout(timer, 1000);
-    console.log(myArray);
+    console.log(exeArray);
     counter();
 }
-
+//adding +1 value to exeArray = "counting"
 function counter() {
-    myArray.unshift(myCounter);
-    myCounter++;
-    showNine();
+    exeArray.unshift(exeCounter);
+    exeCounter++;
+    showOnly9Values();
 }
-
-function showNine() {
-    if (myCounter > 9) {
-        myArray.pop();
+//showing only last nine values of particular line
+function showOnly9Values() {
+    if (exeCounter > 9) {
+        exeArray.pop();
     }
 }
